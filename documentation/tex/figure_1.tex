@@ -1,0 +1,41 @@
+%
+% Copyright © 2014 Sara Lelliott. All Rights Reserved.
+%
+\begin{figure}
+  \centering
+  \begin{tikzpicture}[mindmap, grow cyclic, every node/.style=concept,
+      concept color=orange!40,
+      level 1/.append style={level distance=5cm,sibling angle=90},
+      level 2/.append style={level distance=3cm,sibling angle=45},]
+  %.
+  \node{Name of website}
+     child [concept color=blue!30] { node {Parents}
+          child { node {Quizes}}
+          child { node {Meal Plans: Eat the Rainbow}}
+          child { node {Games4Kids}}
+          child { node {Acedemic Research}}
+          child [concept color=green!40] { node {BMI CALCULATOR}}
+      }
+      child [concept color=yellow!30] { node {Teens}
+          child { node {Quizes}}
+          child { node {Competitions and prizes}}
+          child { node {Teen Depression and Keeping 4ctiv3 (links to other sites)}}
+          child [concept color=green!40] { node {BMI CALCULATOR}}
+      }
+      child [concept color=teal!30] { node {University Students}
+          child { node {Budget Recipes}}
+          child { node {Study Information}}
+          child { node {Diet, Sleep \& Study Depression (links to heaspace)}}
+          child { node {Quizes}}
+          child { node {Progress Blog}}
+          child { node {Activ8 - list of sport SoC's and campus groups}}
+          child [concept color=green!40] { node {BMI CALCULATOR}}
+      }
+      child [concept color=purple!30] { node {Charles Perkins Research Centre}
+          child { node {link to CPC website}}
+      };
+  %.
+  \end{tikzpicture}
+  \caption{Sub-domain Hierarchy}
+  \label{fig:subdomain-hierarchy}
+\end{figure}

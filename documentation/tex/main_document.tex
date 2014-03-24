@@ -1,0 +1,98 @@
+%
+% Copyright © 2014 Sara Lelliott. All Rights Reserved.
+%
+\documentclass[letterpaper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%       LaTeX Packages      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[affil-it]{authblk}
+\usepackage{wrapfig}
+\usepackage{tikz}
+\usetikzlibrary{mindmap}
+\usepackage{hyperref}
+\usepackage{verbatimbox}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tweak title page for multi-authors %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\def\@maketitle{%
+  \newpage
+  \null
+  \vskip 2em%
+  \begin{center}%
+  \let \footnote \thanks
+    {\Large\bfseries \@title \par}%
+    \vskip 1.5em%
+    {\normalsize
+      \lineskip .5em%
+      \begin{tabular}[t]{c}%
+        \@author
+      \end{tabular}\par}%
+    \vskip 1em%
+    {\normalsize \@date}%
+  \end{center}%
+  \par
+  \vskip 1.5em}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%
+% Begin Document %
+%%%%%%%%%%%%%%%%%%
+\begin{document}
+%.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIXME: emails..
+% Primary document author %
+\author{Sara Lelliott%
+  \thanks{Electronic address: \href{mailto:slel0001@uni.sydney.edu.au}{unikey@uni.sydney.edu.au}; Corresponding author}}
+\affil{Department of IT, University of Sydney}
+% Co-authors %
+\author{Claire Lloyd-Prior%
+  \thanks{Electronic address: \href{mailto:unikey@uni.sydney.edu.au}{unikey@uni.sydney.edu.au}}}
+\affil{Department of IT, University of Sydney}
+\author{Robert Schroder%
+  \thanks{Electronic address: \href{mailto:unikey@uni.sydney.edu.au}{unikey@uni.sydney.edu.au}}}
+\affil{Department of IT, University of Sydney}
+\author{Callum Swain%
+  \thanks{Electronic address: \href{mailto:unikey@uni.sydney.edu.au}{unikey@uni.sydney.edu.au}}}
+\affil{Department of IT, University of Sydney}
+\author{Michal Wahnon%
+  \thanks{Electronic address: \href{mailto:unikey@uni.sydney.edu.au}{unikey@uni.sydney.edu.au}}}
+\affil{Department of IT, University of Sydney}
+% Project Title %
+\title{Website Project}
+\date{Dated: \today}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Construct Abstract/Title & Glossary of Figures here %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\maketitle
+\begin{abstract}
+  Here is my abstract??
+\end{abstract}
+\newpage
+\listoffigures
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%
+% Section 1 %
+%%%%%%%%%%%%%
+\section{Site Architecture}
+% include figure 1
+\input{figure_1.tex}
+.
+% include site_map.txt
+\input{site_map.tex}
+
+
+%%%%%%%%%%%%%%%%
+% End Document %
+%%%%%%%%%%%%%%%%
+\end{document}
+%.
