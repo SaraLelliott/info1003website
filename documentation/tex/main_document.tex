@@ -12,7 +12,7 @@
 \usetikzlibrary{positioning,mindmap}
 \usepackage{hyperref}
 \usepackage{verbatimbox}
-\usepackage[xindy,toc]{glossaries}
+\usepackage[xindy,toc,acronym]{glossaries}
 \makeglossaries
 \usepackage[xindy]{imakeidx}
 \makeindex
@@ -167,9 +167,8 @@ components.
 % Include the MVC/MVA Model diagram %
 \input{figure_mva.tex}
 
-This~\ref{fig:mva-arch} three-tier design is in fact the Model View Adapter
-(MVA) architectural pattern. In contrast to the Model View Controller (MVC)
-pattern, the MVA pattern does not allow the \emph{view} component to interact
+This~\ref{fig:mva-arch} three-tier design is in fact the \acrfull{mva} architectural pattern. In contrast to the Model View Controller (MVC)
+pattern, the \acrshort{mva} pattern does not allow the \emph{view} component to interact
 directly with the \emph{data} component instead requests are mediated via the
 \emph{adapter} component.
 
