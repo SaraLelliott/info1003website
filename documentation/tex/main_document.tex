@@ -12,6 +12,10 @@
 \usetikzlibrary{positioning,mindmap}
 \usepackage{hyperref}
 \usepackage{verbatimbox}
+\usepackage[xindy,toc]{glossaries}
+\makeglossaries
+\usepackage[xindy]{imakeidx}
+\makeindex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -38,6 +42,11 @@
   \vskip 1.5em}
 \makeatother
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%
+% Glossary %
+%%%%%%%%%
+\input{INP-00-glossary.tex}
 
 %%%%%%%%%%%%%%%%%%
 % Begin Document %
@@ -133,7 +142,7 @@ We propose that we incorperate A/B testing in both Agile and Iterative design ph
 
 \subsubsection{Agile Testing}
 
-Agile testing has a time to market advantage. So when the project is in it's up time phase, beta testing can commence with a sample of endusers.
+\Gls{agile} testing has a time to market advantage. So when the project is in it's up time phase, beta testing can commence with a sample of endusers.
 
 \subsubsection{Iterative Testing}
 
@@ -169,8 +178,6 @@ are mediated by the \emph{adapter} components logic and packed up for storage
 in the \emph{data} component. The \emph{data} component implements the
 interaction with a database to store modifications to a user session.
 
-
-
 %% .. %%
 \section{Design Comparisons}
 
@@ -181,32 +188,30 @@ Examples of other websites
 
 Add some pictures here
 
-
 %% .. %%
 \section{Domain name}
 
 Stuff about domain name and why... add later
-
 
 %% .. %%
 \section{Story Board}
 
 Examples of enduser experience x 2 here
 
-
 %% .. %%
 \section{Survey Questions and Analysis}
 
 all the things here
 
-
 %% .. %%
 \section{Questions for other teams}
 
+..
 
-
-
-
+% Appendix %
+\appendix
+\printindex
+\printglossaries
 
 %%%%%%%%%%%%%%%%
 % End Document %
