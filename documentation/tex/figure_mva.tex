@@ -1,0 +1,23 @@
+%
+% Copyright © 2014 Sara Lelliott. All Rights Reserved.
+%
+\begin{figure}[ht!]
+  \begin{center}
+    \begin{tikzpicture}[thick]
+      % View
+      \node[rectangle,draw,fill=red!17] (view) {View};
+      % Adapter
+      \node[rectangle,draw,below=3.0cm of view,fill=orange!17] (adapter) {Adapter};
+      % Model
+      \node[rectangle,draw,right=3.0cm of adapter,fill=green!17] (model) {Model};
+      % interactions..
+      \draw[->] (view.south) -- node[left of=adapter] {Data or Command} (adapter.north);
+      \draw[->] (adapter.east) -- node {Conf Update} (model.west);
+      % notification
+      \draw[->,dashed] (model.south) to [bend left=45] node {Send Notification} (adapter.south);
+      \draw[->,dashed] (adapter.north east) to [bend right=45] node[right of=data] {Send Notification} (view.east);
+    \end{tikzpicture}
+    \caption{Model-View-Adapter Architecture}
+    \label{fig:mva-arch}
+  \end{center}
+\end{figure}

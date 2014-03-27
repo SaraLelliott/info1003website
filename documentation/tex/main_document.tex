@@ -9,7 +9,7 @@
 \usepackage[affil-it]{authblk}
 \usepackage{wrapfig}
 \usepackage{tikz}
-\usetikzlibrary{mindmap}
+\usetikzlibrary{positioning,mindmap}
 \usepackage{hyperref}
 \usepackage{verbatimbox}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -136,13 +136,39 @@ This project will incorperate A/B testing in both Agile and Iterative design phi
 
 Agile testing has a time to market advantage. So when the project is in it's up time phase, beta testing can commence with a sample of endusers.
 
-\subsubsection{Iterative testing}
+\subsubsection{Iterative Testing}
 
 This style of testing can be expensive for a life time of a project so it was only used in the conceptualisation phase.
 
 \subsubsection{Model-View-Control}
-...
 
+The interaction of user data and server software state is often a attack vector
+as to nefariously miss-configure the server or simply to take advantage of
+miss-configuration of the intended user by an adversary. We propose a novel
+isolation of the user data state and view from a known \emph{secure by default}
+configuration.
+
+The user session data is dealt is by means of a \emph{client-server}
+model in the context of \emph{RESTful} internet applications, in which
+the \emph{user interface}, \emph{functional configuration logic}
+and \emph{configuration state storage} are \textbf{separated} out as
+independent modular software components. We fix here the terminology of,
+\emph{presentation}, \emph{logic} and \emph{data} to the respective
+components.
+
+% Include the MVC/MVA Model diagram %
+\input{figure_mva.tex}
+
+This~\ref{fig:mva-arch} three-tier design is in fact the Model View Adapter
+(MVA) architectural pattern. In contrast to the Model View Controller (MVC)
+pattern, the MVA pattern does not allow the \emph{view} component to interact
+directly with the \emph{data} component instead requests are mediated via the
+\emph{adapter} component.
+
+The configuration state modifications expressed in the \emph{view} component
+are mediated by the \emph{adapter} components logic and packed up for storage
+in the \emph{data} component. The \emph{data} component implements the
+interaction with a database to store modifications to a user session.
 
 %%%%%%%%%%%%%%%%
 % End Document %

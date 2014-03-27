@@ -4,3 +4,5 @@
 *.log
 *.aux
 *.DS_Store
+*.pdf
+*.toc
