@@ -6,6 +6,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %       LaTeX Packages      %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
 \usepackage[affil-it]{authblk}
 \usepackage{wrapfig}
 \usepackage{tikz}
@@ -191,12 +192,24 @@ Add some pictures here
 %% .. %%
 \section{Domain name}
 
-Stuff about domain name and why... add later
+Stepup.org is the Domain the group chose. We have done this to encourage the Enduser to rise to the challange and fight obesiety through daily excercise and healthy eating.
 
 %% .. %%
 \section{Story Board}
 
-Examples of enduser experience x 2 here
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=0.9\textwidth]{assets/jpg/parent_and_children_experience}
+  \caption{Storyboard of End User Experience: Parent and Child}
+  \label{fig:parent-and-children-experience}
+\end{figure}
+..
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=0.9\textwidth]{assets/jpg/stepup_com_scenario_2}
+  \caption{Storyboard of End User Experience: \url{stepup.com} scenario}
+  \label{fig:stepup-com-scenario-2}
+\end{figure}
 
 %% .. %%
 \section{Survey Questions and Analysis}
@@ -218,13 +231,12 @@ What qualitive data have you gathered to test whether methods implemented on the
 
 In regards to potential flaws in design philosphy, what actions have you taken to compensate for these flaws?
 
-
-
 ..
 
 % Appendix %
 \appendix
 \printindex
+\glossarystyle{altlistgroup}
 \printglossaries
 
 %%%%%%%%%%%%%%%%
