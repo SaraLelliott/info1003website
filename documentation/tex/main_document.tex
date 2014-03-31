@@ -12,7 +12,8 @@
 \usepackage[affil-it]{authblk}
 \usepackage{wrapfig}
 \usepackage{tikz}
-\usetikzlibrary{positioning,mindmap}
+\usetikzlibrary{positioning,mindmap,shapes, decorations}
+\usepackage{amsmath,amssymb}
 \usepackage{bchart}
 \usepackage{hyperref}
 \usepackage{cleveref}
@@ -224,7 +225,7 @@ Other sites found are seen here~\cref{fig:othersites}
 \begin{figure}[ht!]
   \centering
   \includegraphics[width=0.9\textwidth]{assets/jpg/othersite_1}
-  \caption{Other sites}
+  \caption{Other sites 1}
   \label{fig:othersites}
 \end{figure}
 \FloatBarrier
@@ -232,16 +233,16 @@ Other sites found are seen here~\cref{fig:othersites}
 \begin{figure}[ht!]
   \centering
   \includegraphics[width=0.9\textwidth]{assets/jpg/othersite_2}
-  \caption{Other sites}
-  \label{fig:othersites}
+  \caption{Other sites 2}
+  \label{fig:othersites-2}
 \end{figure}
 \FloatBarrier
 
 \begin{figure}[ht!]
   \centering
   \includegraphics[width=0.9\textwidth]{assets/jpg/othersite_3}
-  \caption{Other sites}
-  \label{fig:othersites}
+  \caption{Other sites 3}
+  \label{fig:othersites-3}
 \end{figure}
 \FloatBarrier
 
@@ -273,7 +274,7 @@ Stepup.org is the Domain the group chose. We have done this to encourage the End
 
 \begin{figure}[ht!]
   \centering
-  \begin{bchart}[step=15,max=100,width=12cm]
+  \begin{bchart}[step=15,max=45,width=12cm]
     \bcbar[label=Unfamiliar,value=3]{3}
     \bcbar[label=Somewhat Fair,value=37,color=red]{37}
     \bcbar[label=Comfortable,value=21]{21}
@@ -289,7 +290,50 @@ Stepup.org is the Domain the group chose. We have done this to encourage the End
 
 \subsection{Security}
 
+\begin{itemize}
+  \item
 What security messures will you use to santise user input (protect client data from malicious code being entered into the form eg. escape characters)?
+  \item
+Does the site have a vaild \gls{ssl} certificate?
+\end{itemize}
+
+\subsection{Search Engine Indexing}
+
+What about \gls{sco} considerations?
+
+% Define box and box title style
+\tikzstyle{mybox} = [
+    draw=red,
+    fill=blue!20,
+    very thick,
+    rectangle,
+    rounded corners,
+    inner sep=10pt,
+    inner ysep=20pt
+]
+\tikzstyle{fancytitle} =[fill=red, text=white]
+
+\begin{figure}
+  \centering
+\begin{tikzpicture}
+    \node [mybox] (box){
+        \begin{minipage}{0.9\textwidth}
+            $\underbrace{\text{http}}_{\text{protocol}}
+\text{://}
+\underbrace{
+\overbrace{\text{martin-thoma}}^\text{2\textsuperscript{nd} level domain}
+\text{.}
+\overbrace{\text{com}}^\text{TLD}
+}_\text{hostname}
+\underbrace{\text{/why-to-study-math/}}_\text{path}
+\text{\#}
+\underbrace{\text{Math\_is\_fun}}_\text{Fragment identifier}$
+        \end{minipage}
+    };
+    \node[fancytitle, right=10pt] at (box.north west) {The URL};
+\end{tikzpicture}
+  \caption{The structure of a \acrfull{url}.}
+\end{figure}
 
 \subsection{Research}
 

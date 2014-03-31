@@ -27,5 +27,10 @@
 \glsXpageXglsnumberformat{}{8}}}\glsgroupskip
 \glsgroupheading{R}\relax\glsresetentrylist
 \glossaryentryfield{restful}{\glsnamefont{RESTful}}{\emph {RESTful} web applications do not store the state of a user session on the server}{\relax }{\glossaryentrynumbers{\relax 
-\glsXpageXglsnumberformat{}{9}}}%
+\glsXpageXglsnumberformat{}{9}}}\glsgroupskip
+\glsgroupheading{S}\relax\glsresetentrylist
+\glossaryentryfield{sco}{\glsnamefont{SCO}}{How well a site is picked up by a search engine for indexing (\emph {robots.text})}{\relax }{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{18}}}\relax\glsresetentrylist
+\glossaryentryfield{ssl}{\glsnamefont{SSL}}{Transport Layer Security (TLS) and its predecessor, Secure Sockets Layer (SSL) are the protocol used to encrypt a user session with the host server software}{\relax }{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{18}}}%
 \end{theglossary}\glossarypostamble
