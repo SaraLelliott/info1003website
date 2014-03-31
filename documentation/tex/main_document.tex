@@ -7,10 +7,12 @@
 %       LaTeX Packages      %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{graphicx}
+\usepackage[section]{placeins}
 \usepackage[affil-it]{authblk}
 \usepackage{wrapfig}
 \usepackage{tikz}
 \usetikzlibrary{positioning,mindmap}
+\usepackage{bchart}
 \usepackage{hyperref}
 \usepackage{verbatimbox}
 \usepackage[xindy,toc,acronym]{glossaries}
@@ -197,24 +199,32 @@ Stepup.org is the Domain the group chose. We have done this to encourage the End
 %% .. %%
 \section{Story Board}
 
-\begin{figure}[p]
+\begin{figure}[ht!]
   \centering
   \includegraphics[width=0.9\textwidth]{assets/jpg/parent_and_children_experience}
   \caption{Storyboard of End User Experience: Parent and Child}
   \label{fig:parent-and-children-experience}
 \end{figure}
-..
-\begin{figure}[p]
+\FloatBarrier
+\begin{figure}[ht!]
   \centering
   \includegraphics[width=0.9\textwidth]{assets/jpg/stepup_com_scenario_2}
   \caption{Storyboard of End User Experience: \url{stepup.com} scenario}
   \label{fig:stepup-com-scenario-2}
 \end{figure}
+\FloatBarrier
 
 %% .. %%
 \section{Survey Questions and Analysis}
 
-all the things here
+ \begin{bchart}[step=15,max=100,width=12cm]
+  \bcbar[label=Unfamiliar,value=3]{3}
+  \bcbar[label=Somewhat Fair,value=37,color=red]{37}
+  \bcbar[label=Comfortable,value=21]{21}
+  \bcbar[label=Very Good,value=35]{35}
+  \bcbar[label=Exellent,value=1]{1}
+ \end{bchart}
+
 
 %% .. %%
 \section{Questions for other teams}
@@ -231,7 +241,7 @@ What qualitive data have you gathered to test whether methods implemented on the
 
 In regards to potential flaws in design philosphy, what actions have you taken to compensate for these flaws?
 
-..
+
 
 % Appendix %
 \appendix
