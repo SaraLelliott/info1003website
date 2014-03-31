@@ -7,6 +7,7 @@
 %       LaTeX Packages      %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{graphicx}
+\usepackage{multirow}
 \usepackage[section]{placeins}
 \usepackage[affil-it]{authblk}
 \usepackage{wrapfig}
@@ -14,6 +15,7 @@
 \usetikzlibrary{positioning,mindmap}
 \usepackage{bchart}
 \usepackage{hyperref}
+\usepackage{cleveref}
 \usepackage{verbatimbox}
 \usepackage[xindy,toc,acronym]{glossaries}
 \makeglossaries
@@ -171,7 +173,7 @@ components.
 % Include the MVC/MVA Model diagram %
 \input{figure_mva.tex}
 
-This~\ref{fig:mva-arch} three-tier design is in fact the \acrfull{mva} architectural pattern. In contrast to the Model View Controller (MVC)
+This~\cref{fig:mva-arch} three-tier design is in fact the \acrfull{mva} architectural pattern. In contrast to the Model View Controller (MVC)
 pattern, the \acrshort{mva} pattern does not allow the \emph{view} component to interact
 directly with the \emph{data} component instead requests are mediated via the
 \emph{adapter} component.
@@ -184,7 +186,7 @@ interaction with a database to store modifications to a user session.
 %% .. %%
 \section{Site Layout}
 
-Primary~\ref{fig:layout-mainpage} (Site A.) site.
+Primary~\cref{fig:layout-mainpage} (Site A.) site.
 
 \begin{figure}[ht!]
   \centering
@@ -198,7 +200,13 @@ Primary~\ref{fig:layout-mainpage} (Site A.) site.
 %% .. %%
 \section{Design Comparisons}
 
-Other sites found are seen here~\ref{fig:othersites}
+%% FIXME: Use Excel plugin to export these later and include them
+\includegraphics{assets/jpg/tab1}
+\includegraphics{assets/jpg/tab2}
+\includegraphics{assets/jpg/tab3}
+%%%%
+
+Other sites found are seen here~\cref{fig:othersites}
 
 %\begin{table}[ht]
  % \centering
