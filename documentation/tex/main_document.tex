@@ -1,7 +1,7 @@
 %
 % Copyright © 2014 Sara Lelliott. All Rights Reserved.
 %
-\documentclass[letterpaper,twoside,12pt]{article}
+\documentclass[letterpaper,12pt]{article}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %       LaTeX Packages      %
@@ -137,7 +137,6 @@ The Charles Perkins Centre page will contain a brief description of who Charles 
 
 A page where we outline our core values and what we wish to achieve with this website and another list of useful links and related sources.
 
-
 \subsection{About us}
 
 About us will list the contributors to this website and contact.
@@ -145,9 +144,9 @@ About us will list the contributors to this website and contact.
 %% .. %%
 \section{Design philosphy of the Website}
 
-\subsection{Development life cycle}
+\subsection{Development Life Cycle}
 
-We propose that we incorperate A/B testing in both Agile and Iterative design philosophies as both have advantages and disadvantages and will add dynamism to the project. Version control will assist in running concurent concepts. 
+We propose that we incorperate A/B Testing in both \Gls{agile} and Iterative design philosophies as both have advantages and disadvantages and will add dynamism to the project. Version control will assist in running concurent concepts. 
 
 \subsubsection{Agile Testing}
 
@@ -166,7 +165,7 @@ isolation of the user data state and view from a known \emph{secure by default}
 configuration.
 
 The user session data is dealt is by means of a \emph{client-server}
-model in the context of \emph{RESTful} internet applications, in which
+model in the context of \gls{restful} internet applications, in which
 the \emph{user interface}, \emph{programatic logic}
 and \emph{storage} are \textbf{separated} out as
 independent modular software components. We fix here the terminology of,
@@ -190,7 +189,6 @@ interaction with a database to store modifications to a user session.
 \section{Site Layout}
 
 Primary~\cref{fig:layout-mainpage} (Site A.) site.
-
 \begin{figure}[ht!]
   \centering
   \includegraphics[width=0.9\textwidth]{assets/jpg/layout_mainpage}
@@ -199,18 +197,18 @@ Primary~\cref{fig:layout-mainpage} (Site A.) site.
 \end{figure}
 \FloatBarrier
 
-
 %% .. %%
 \section{Design Comparisons}
 
 %% FIXME: Use Excel plugin to export these later and include them
-\includegraphics{assets/jpg/tab1}
-\includegraphics{assets/jpg/tab2}
-\includegraphics{assets/jpg/tab3}
+\includegraphics[width=0.9\textwidth]{assets/jpg/tab1}
+
+\includegraphics[width=0.9\textwidth]{assets/jpg/tab2}
+
+\includegraphics[width=0.9\textwidth]{assets/jpg/tab3}
 %%%%
 
 Other sites found are seen here~\cref{fig:othersites}
-
 %\begin{table}[ht]
  % \centering
  % \begin{tabular}{cc}
@@ -247,8 +245,6 @@ Other sites found are seen here~\cref{fig:othersites}
 \end{figure}
 \FloatBarrier
 
-Examples of other websites
-
 %% .. %%
 \section{Domain name}
 
@@ -275,18 +271,23 @@ Stepup.org is the Domain the group chose. We have done this to encourage the End
 %% .. %%
 \section{Survey Questions and Analysis}
 
- \begin{bchart}[step=15,max=100,width=12cm]
-  \bcbar[label=Unfamiliar,value=3]{3}
-  \bcbar[label=Somewhat Fair,value=37,color=red]{37}
-  \bcbar[label=Comfortable,value=21]{21}
-  \bcbar[label=Very Good,value=35]{35}
-  \bcbar[label=Exellent,value=1]{1}
- \end{bchart}
+\begin{figure}[ht!]
+  \centering
+  \begin{bchart}[step=15,max=100,width=12cm]
+    \bcbar[label=Unfamiliar,value=3]{3}
+    \bcbar[label=Somewhat Fair,value=37,color=red]{37}
+    \bcbar[label=Comfortable,value=21]{21}
+    \bcbar[label=Very Good,value=35]{35}
+    \bcbar[label=Exellent,value=1]{1}
+  \end{bchart}
+  \caption{Heathy Eating Paterns}
+  \label{tab:heating-patterns}
+\end{figure}
 
 %% .. %%
-\section{Questions for other teams}
+\section{Questions for other Teams}
 
-\subsection{ Security}
+\subsection{Security}
 
 What security messures will you use to santise user input (protect client data from malicious code being entered into the form eg. escape characters)?
 
@@ -298,9 +299,9 @@ What qualitive data have you gathered to test whether methods implemented on the
 
 In regards to potential flaws in design philosphy, what actions have you taken to compensate for these flaws?
 
-
-
+%%%%%%%%%%
 % Appendix %
+%%%%%%%%%%
 \appendix
 \printindex
 \glossarystyle{altlistgroup}
